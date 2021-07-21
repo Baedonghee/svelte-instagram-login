@@ -4,7 +4,7 @@ An Instagram Sign-in / Log-in Svelte
 
 ## Api guide
 
-- [instagram api guide](https://www.instagram.com/developer/)
+- [instagram api guide](https://developers.facebook.com/docs/instagram-api/)
 
 ## Install
 ```
