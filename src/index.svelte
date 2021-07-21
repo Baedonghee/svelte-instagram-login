@@ -34,8 +34,8 @@
     } else if (window.location.search.includes('error')) {
       dispatch('failure', { 
         error: getQuery('error'),
-        error_reason: getQuery('error_reason'),
-        error_description: getQuery('error_description')
+        errorReason: getQuery('error_reason'),
+        errorDescription: getQuery('error_description')
       });
     }
 	})
