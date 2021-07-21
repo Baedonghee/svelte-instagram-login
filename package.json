@@ -1,23 +1,40 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
-  "private": true,
+  "name": "svelte-instagram-login",
+  "version": "0.0.1",
+  "description": "svelte instagram-login",
+  "author": "Baedonghee <appleehdgml@gmail.com> (https://github.com/Baedonghee)",
+  "license": "MIT",
+  "svelte": "src/index.svelte",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Baedonghee/svelte-instagram-login.git"
+  },
+  "homepage": "https://github.com/Baedonghee/svelte-instagram-login.git#README",
+  "module": "index.mjs",
+  "main": "index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "rollup": "^2.3.4",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
     "svelte": "^3.0.0"
   },
-  "dependencies": {
-    "sirv-cli": "^1.0.0"
-  }
+  "peerDependencies": {
+    "svelte": "^3.0.0"
+  },
+  "keywords": [
+    "svelte",
+    "instagram",
+    "login",
+    "svelte-instagram-login"
+  ],
+  "files": [
+    "src",
+    "index.mjs",
+    "index.js"
+  ]
 }
