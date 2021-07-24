@@ -50,6 +50,7 @@ An Instagram Sign-in / Log-in Svelte
 - `customRender` (optional) [boolean] - default: `false`
 - `redirectUrl` (optional) [boolean] - default: `window.location.href`
 - `style` (optional) [string] - default: `style="border: 1px solid #ffffff"`
+- `ref` (optional) [htmlelement] - default: null
 - `on:success` [func]
 - `on:failure` [func]
 

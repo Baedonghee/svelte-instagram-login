@@ -8,6 +8,7 @@
 	export let customRender = false;
   export let redirectUrl = ''
   export let style = '';
+  export let ref = null;
 
   const dispatch = createEventDispatcher();
 
@@ -23,7 +24,6 @@
 	}
 
 	onMount(() => {
-    console.log('cc');
     if (implicitAuth) {
       const matches = window.location.hash.match(/=(.*)/)
       if (matches) {
@@ -47,21 +47,23 @@
 	}
 </script>
 {#if customRender}
-	<span on:click={handleClick}>
+	<span on:click={handleClick} bind:this={ref}>
 		<slot />
 	</span>
 {:else}
-	<button style={`
-    ${style}
-    display: inline-block;
-    background: linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-    color: #fff;
-    width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 2px;
-    border: 1px solid transparent;
-    font-size: 16px;
-    font-weight: bold;
-  `} type="button" on:click={handleClick}>{buttonText}</button>
+  <span on:click={handleClick} bind:this={ref}>
+    <button style={`
+      ${style}
+      display: inline-block;
+      background: linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+      color: #fff;
+      width: 200px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      font-size: 16px;
+      font-weight: bold;
+    `} type="button">{buttonText}</button>
+  </span>
 {/if}
