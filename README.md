@@ -14,7 +14,7 @@ An Instagram Sign-in / Log-in Svelte
 ## How to use
 ```js
     <script>
-      import InstagramLogin from '../../src/index.svelte';
+      import InstagramLogin from 'svelte-instagram-login';
 
       const handleSuccess = ({ detail: { data }}) => {
         console.log(data); // code or token
